@@ -1,9 +1,29 @@
+const Experiment = (props) => {
+  return React.createElement("div", {}, [
+    React.createElement("h2", {}, props.name),
+    React.createElement("p", {}, [
+      React.createElement("strong", {}, props.date),
+      React.createElement("br"),
+      React.createElement("span", {}, props.routine),
+    ]),
+    React.createElement("hr"),
+  ]);
+};
+
 const App = () => {
-  return React.createElement(
-    "section",
-    {},
-    React.createElement("h1", {}, "Do experiments!")
-  );
+  return React.createElement("section", {}, [
+    React.createElement("h1", {}, "Do experiments!"),
+    React.createElement(Experiment, {
+      name: "Exercice once a day",
+      date: "Date: 9.10.2025 - 14.10.2025",
+      routine: "Routine: Everytime after breakfast around 10:00",
+    }),
+    React.createElement(Experiment, {
+      name: "Don't use phone till lunch",
+      date: "Date: 15.10.2025 - 21.10.2025",
+      routine: "Routine: Hide your phone till lunch.",
+    }),
+  ]);
 };
 
 const container = document.querySelector("#root");
