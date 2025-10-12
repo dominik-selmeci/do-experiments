@@ -1,19 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { Experiment } from "./experiment";
 
-const Experiment = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, props.name),
-    React.createElement("p", {}, [
-      React.createElement("strong", {}, props.date),
-      React.createElement("br"),
-      React.createElement("span", {}, props.routine),
-    ]),
-    React.createElement("hr"),
-  ]);
-};
-
-const App = () => {
+export const App = () => {
   return React.createElement("section", {}, [
     React.createElement("h1", {}, "Do experiments!"),
     React.createElement(Experiment, {
