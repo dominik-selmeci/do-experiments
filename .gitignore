@@ -1,6 +1,66 @@
-node_modules
-dist/
-.env
+# --- OS cruft ---
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors/IDEs ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+
+# --- Node / pnpm ---
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+.eslintcache
+
+# Keep only the root lockfile; block accidental nested ones
+**/package-lock.json
+**/yarn.lock
+# Allow root pnpm-lock.yaml; ignore nested ones if someone runs pnpm inside a package
+**/pnpm-lock.yaml
+!/pnpm-lock.yaml
+
+# --- Build outputs / caches (mono-wide) ---
+dist/
+build/
+lib/
+out/
+.tmp/
+.temp/
+.cache/
 coverage/
-.vscode/
+.nyc_output/
+.storybook-out/
+storybook-static/
+
+# Tooling caches
+.parcel-cache/
+.rollup.cache/
+.vite/
+.turbo/
+.next/
+.nuxt/
+.svelte-kit/
+playwright-report/
+test-results/
+
+# --- Env / secrets (keep .env.example tracked) ---
+.env
+.env.*
+!.env.example
+
+# --- Misc archives & dumps ---
+*.log
+*.pid
+*.seed
+*.tgz
+
+# --- Images or assets produced by tools (optional) ---
+**/*.local.*

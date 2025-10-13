@@ -7,6 +7,24 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.37.0
+        version: 9.37.0
+      eslint:
+        specifier: 9.37.0
+        version: 9.37.0
+      eslint-config-prettier:
+        specifier: 10.1.8
+        version: 10.1.8(eslint@9.37.0)
+      globals:
+        specifier: 16.4.0
+        version: 16.4.0
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+
+  apps/web:
     dependencies:
       react:
         specifier: 19.2.0
@@ -15,27 +33,12 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@eslint/js':
-        specifier: ^9.37.0
-        version: 9.37.0
       '@vitejs/plugin-react':
         specifier: 5.0.4
         version: 5.0.4(vite@7.1.9)
-      eslint:
-        specifier: 9.37.0
-        version: 9.37.0
-      eslint-config-prettier:
-        specifier: 10.1.8
-        version: 10.1.8(eslint@9.37.0)
       eslint-plugin-react:
         specifier: 7.37.5
         version: 7.37.5(eslint@9.37.0)
-      globals:
-        specifier: 16.4.0
-        version: 16.4.0
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
       vite:
         specifier: 7.1.9
         version: 7.1.9

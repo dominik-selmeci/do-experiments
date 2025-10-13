@@ -1,5 +1,5 @@
 {
-  "name": "do-experiments-monorepo",
+  "name": "@de-app/web",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -18,11 +18,12 @@
   "license": "ISC",
   "packageManager": "pnpm@10.18.2",
   "devDependencies": {
-    "@eslint/js": "^9.37.0",
-    "eslint": "9.37.0",
-    "eslint-config-prettier": "10.1.8",
-    "globals": "16.4.0",
-    "prettier": "^3.6.2"
+    "@vitejs/plugin-react": "5.0.4",
+    "eslint-plugin-react": "7.37.5",
+    "vite": "7.1.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
 }
