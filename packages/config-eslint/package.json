@@ -1,0 +1,8 @@
+{
+  "name": "@de/config-eslint",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./eslint.config.mjs",
+  "dependencies": {}
+}

@@ -9,7 +9,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "format": "prettier \"src/**/*.{js,jsx,ts,tsx,css,html}\" --write",
-    "lint": "eslint",
+    "lint": "pnpm --recursive lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

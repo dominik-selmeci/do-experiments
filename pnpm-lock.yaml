@@ -33,6 +33,9 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
+      '@de/config-eslint':
+        specifier: workspace:*
+        version: link:../../packages/config-eslint
       '@vitejs/plugin-react':
         specifier: 5.0.4
         version: 5.0.4(vite@7.1.9)
@@ -42,6 +45,8 @@ importers:
       vite:
         specifier: 7.1.9
         version: 7.1.9
+
+  packages/config-eslint: {}
 
 packages:
 
