@@ -1,7 +1,19 @@
-// Import the framework and instantiate it
 import Fastify from "fastify";
+
+const isDev = process.env.NODE_ENV !== "production";
+const devLogger = {
+  level: "debug",
+  transport: {
+    target: "pino-pretty",
+    options: {
+      ignore: "pid,hostname",
+      translateTime: "HH:MM:ss Z",
+      singleLine: true,
+    },
+  },
+};
 const fastify = Fastify({
-  logger: true,
+  logger: isDev ? devLogger : true,
 });
 
 // Declare a route
