@@ -16,13 +16,12 @@
   "type": "module",
   "author": "Dominik Šelmeci",
   "license": "ISC",
-  "packageManager": "pnpm@10.18.2",
+  "packageManager": "pnpm@10.18.3",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "eslint": "9.37.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "16.4.0",
     "prettier": "^3.6.2"
-  },
-  "dependencies": {}
+  }
 }
