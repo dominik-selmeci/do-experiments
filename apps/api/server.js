@@ -1,3 +1,4 @@
+import Database from "better-sqlite3";
 import Fastify from "fastify";
 
 const isDev = process.env.NODE_ENV !== "production";
@@ -16,9 +17,14 @@ const fastify = Fastify({
   logger: isDev ? devLogger : true,
 });
 
-// Declare a route
-fastify.get("/", async function handler(request, reply) {
-  return { hello: "world" };
+const db = new Database("do-experiments.db");
+
+fastify.get("/api/experiments", async function getExperiments(_, res) {
+  const experiments = db
+    .prepare("SELECT id, name, description, created_at FROM experiments")
+    .all();
+
+  res.send(experiments);
 });
 
 // Run the server!
