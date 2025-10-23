@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
-import { Experiment } from "./Experiment";
 import { StrictMode } from "react";
 import { AddExperiment } from "./AddExperiment";
+import { Experiments } from "./Experiments";
 
 export const App = () => {
   return (
@@ -13,16 +13,7 @@ export const App = () => {
             <AddExperiment />
           </article>
           <article>
-            <Experiment
-              name="Exercice once a day"
-              date="Date: 9.10.2025 - 14.10.2025"
-              routine="Routine: Everytime after breakfast around 10:00"
-            />
-            <Experiment
-              name="Don't use phone till lunch"
-              date="Date: 15.10.2025 - 21.10.2025"
-              routine="Routine: Hide your phone till lunch."
-            />
+            <Experiments />
           </article>
         </div>
       </section>

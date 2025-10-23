@@ -3,9 +3,7 @@ export const Experiment = (props) => {
     <div className="Experiment">
       <h2>{props.name}</h2>
       <p>
-        <strong>{props.date}</strong>
-        <br />
-        <span>{props.routine}</span>
+        <strong>{props.description}</strong>
       </p>
       <hr />
     </div>
