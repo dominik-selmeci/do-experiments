@@ -1,14 +1,9 @@
 import { Experiment } from "./Experiment";
-import { useExperiments } from "./hooks/useExperiments";
 
-export function Experiments() {
-  const experiments = useExperiments();
-
-  return !experiments ? (
-    <article aria-busy="true"></article>
-  ) : (
+export function Experiments(props) {
+  return props?.experiments ? (
     <>
-      {experiments.map((experiment) => (
+      {props.experiments.map((experiment) => (
         <Experiment
           key={experiment.id}
           name={experiment.name}
@@ -16,5 +11,7 @@ export function Experiments() {
         />
       ))}
     </>
+  ) : (
+    <article aria-busy="true"></article>
   );
 }

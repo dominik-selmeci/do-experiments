@@ -1,11 +1,16 @@
 import { useState } from "react";
 
-export const AddExperiment = () => {
+export const AddExperiment = (props) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
+  async function onFormSubmit(event) {
+    event.preventDefault();
+    if (props.onFormSubmit) props.onFormSubmit({ name, description });
+  }
+
   return (
-    <form>
+    <form onSubmit={(e) => onFormSubmit(e)}>
       <fieldset>
         <legend>Create a new experiment: {name}</legend>
 
