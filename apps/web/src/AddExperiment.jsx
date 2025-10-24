@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export const AddExperiment = (props) => {
   const [name, setName] = useState("");
@@ -6,7 +7,18 @@ export const AddExperiment = (props) => {
 
   async function onFormSubmit(event) {
     event.preventDefault();
-    if (props.onFormSubmit) props.onFormSubmit({ name, description });
+    if (typeof props.onFormSubmit !== "function") return;
+
+    try {
+      await props.onFormSubmit({ name, description });
+      toast.success("A new experiment was created!");
+
+      // clear the form
+      setName("");
+      setDescription("");
+    } catch {
+      toast.error("Can't create a new experiment.");
+    }
   }
 
   return (

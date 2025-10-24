@@ -12,9 +12,10 @@ export const useExperiments = () => {
       body: JSON.stringify(data),
     });
 
-    if (response.status === 201) {
-      fetchExperiments(); // refresh data
-    }
+    if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+
+    fetchExperiments(); // refresh data
+    return (await response.json())?.id;
   }
 
   async function fetchExperiments() {

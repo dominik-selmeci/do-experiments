@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import Fastify from "fastify";
-import { createExperimentModel } from "./src/experiment.mjs";
+import { createExperimentModel } from "./src/experiment.js";
 
 const isDev = process.env.NODE_ENV !== "production";
 const devLogger = {

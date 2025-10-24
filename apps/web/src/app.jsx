@@ -3,6 +3,7 @@ import { StrictMode } from "react";
 import { AddExperiment } from "./AddExperiment";
 import { Experiments } from "./Experiments";
 import { useExperiments } from "./hooks/useExperiments";
+import { Toaster } from "react-hot-toast";
 
 export const App = () => {
   const { experiments, addExperiment } = useExperiments();
@@ -20,6 +21,17 @@ export const App = () => {
           </article>
         </div>
       </section>
+      <Toaster
+        position="bottom-center"
+        toastOptions={{
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+            minWidth: "380px",
+          },
+        }}
+      />
     </main>
   );
 };
