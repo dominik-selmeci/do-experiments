@@ -16,7 +16,6 @@
   "type": "module",
   "author": "Dominik Šelmeci",
   "license": "ISC",
-  "packageManager": "pnpm@10.18.2",
   "devDependencies": {
     "@de/config-eslint": "workspace:*",
     "@vitejs/plugin-react": "5.0.4",

@@ -16,7 +16,7 @@
   "type": "module",
   "author": "Dominik Šelmeci",
   "license": "ISC",
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.19.0",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "eslint": "9.37.0",
