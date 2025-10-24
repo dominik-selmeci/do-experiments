@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
 import { Experiment } from "./Experiment";
+import { useExperiments } from "./hooks/useExperiments";
 
 export function Experiments() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [experiments, setExperiments] = useState([]);
+  const experiments = useExperiments();
 
-  async function fetchExperiments() {
-    const experimentsRes = await fetch("/api/experiments");
-    const experiments = await experimentsRes.json();
-
-    setExperiments(experiments);
-    setIsLoading(false);
-  }
-
-  useEffect(() => {
-    fetchExperiments();
-  }, []);
-
-  return isLoading ? (
+  return !experiments ? (
     <article aria-busy="true"></article>
   ) : (
     <>
