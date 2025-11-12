@@ -18,7 +18,9 @@ const fastify = Fastify({
   logger: isDev ? devLogger : true,
 });
 
-const db = new Database("do-experiments.db");
+const db = new Database(
+  isDev ? "do-experiments-development.db" : "do-experiments.db",
+);
 
 fastify.get("/api/experiments", async function getExperiments(_, res) {
   const experiments = db

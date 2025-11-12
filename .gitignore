@@ -64,3 +64,6 @@ test-results/
 
 # --- Images or assets produced by tools (optional) ---
 **/*.local.*
+
+# --- Development only files ---
+do-experiments-development.db
